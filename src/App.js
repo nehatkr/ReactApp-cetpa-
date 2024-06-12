@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ClassComp from "./Components/classComp";
+import FunctionalComp from "./Components/functionalComp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="red">
+      Hello User
+      <div className="container">
+        <div className="borderBox">
+        <FunctionalComp city="Nagpur" country="India"/>
+        </div>
+        <div className="borderBox">
+          <ClassComp age="100" school="DPS"/>
+        </div>
+      </div>
     </div>
   );
 }
