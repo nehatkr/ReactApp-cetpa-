@@ -1,15 +1,18 @@
-import React,{useState} from "react";
+import React,{useRef} from "react";
 // import {formik,Form,Field,ErrorMessage} from "formik"; 
 
-// CONTROLLED COMPONENT
-export default function FormDemo(){
-    const [user, setUser] = useState("");
-    const [pass, setPass] = useState("");
+// UNCONTROLLED COMPONENT
+export default function Uncontrolled(){
+    // const [user, setUser] = useState("");
+    // const [pass, setPass] = useState("");
+
+    const userRef = useRef(null);
+    const passwordRef = useRef(null);
 
     const onSubmitClick =(e) => {
         //stop page refresh
         e.preventDefault();
-        console.log("user and pass",user,pass);
+        console.log("user and pass",userRef.current.value,passwordRef.current.value);
     };
     return (
     <>
@@ -22,8 +25,9 @@ export default function FormDemo(){
         type="text"
         id="username"
         name="username"
-        value={user}
-        onChange={(e) => setUser(e.target.value)}
+        ref={userRef}
+        // value={user}
+        // onChange={(e) => setUser(e.target.value)}
         />
         <br/>
         <br/>
@@ -33,8 +37,9 @@ export default function FormDemo(){
         type="password"
         id="password"
         name="password"
-        value={pass}
-        onChange={(e) => setPass(e.target.value)}
+        ref={passwordRef}
+        // value={pass}
+        // onChange={(e) => setPass(e.target.value)}
         />
         <br/>
         <br/>
