@@ -1,6 +1,9 @@
 // import { Formik } from "formik";
 import "./App.css";
-import Uncontrolled from "./Components/uncontrolled";
+import UseCallback from "./Components/usecallback";
+// import Uncontrolled from "./Components/uncontrolled";
+// import UseContextDemo from "./Components/useContext";
+// import UseReducer from "./Components/useReducer";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
 // import MaterialDemo from "./Components/materialDemo";
@@ -19,7 +22,10 @@ import Uncontrolled from "./Components/uncontrolled";
 function App() {
   return (
     <div className="red">
-      <Uncontrolled />
+      <UseCallback />
+      {/* <UseReducer /> */}
+      {/* <UseContextDemo /> */}
+      {/* <Uncontrolled /> */}
       {/* <MaterialDemo /> */}
      {/* <FormikFormDemo /> */}
       {/* <FormDemo /> */}
